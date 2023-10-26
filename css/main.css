@@ -1,0 +1,145 @@
+@charset "utf-8";
+*{margin: 0;padding: 0;}
+li{list-style: none;}
+a{
+    text-decoration: none;
+    display: block;
+    color: inherit;
+    transition: .3s;
+}
+img{display: block;}
+body{color: #333;}
+
+#wrap{display: flex;height: 650px;}
+#right{width: 800px;}
+
+.logo{padding: 30px 0;}
+nav{padding:10px;}
+
+.sub{display: none;}
+/* .gnb li:hover .sub{display: block;} */
+/* 지엔비에 호버하면 서브가 보영~~~ */
+/* 제이쿼리 작성하기 전에 주석처리 해주기 */
+
+.gnb a{line-height: 40px;text-align: center;}
+.sub a{line-height: 32px;}
+/* 지앤비에 센터 먹였으니까 서브도 됨~~~ */
+
+.gnb li:hover>a{
+    background: #333;color: #fff;}
+
+.gnb{box-shadow: 0 0 3px #333;}
+.gnb>li{border-bottom: 1px #ccc solid;}
+.gnb>li:last-child{border:0}
+
+#slide{overflow: hidden;
+height: 350px;}
+#slide ul{animation: fade 9s infinite;}
+@keyframes fade{
+    0%{margin-top: 0; opacity: 0;}
+    3%{margin-top: 0; opacity: 1;}
+    30%{margin-top: 0; opacity: 1;}
+    33%{margin-top: 0; opacity: 0;}
+
+    33.1%{margin-top: -350px; opacity: 0;}
+    36%{margin-top: -350px; opacity: 1;}
+    63%{margin-top: -350px; opacity: 1;}
+    66%{margin-top: -350px; opacity: 0;}
+
+    66.1%{margin-top: -700px; opacity: 0;}
+    69%{margin-top: -700px; opacity: 1;}
+    97%{margin-top: -700px; opacity: 1;}
+    100%{margin-top: -700px; opacity: 0;}
+}
+
+#contents{height: 200px;display: flex;}
+#contents section{
+    padding: 10px; width: 240px;
+}
+#contents section:first-child{width: 260px;}
+
+.tab{
+    display: flex;
+    box-shadow: 0 0 3px #333;
+}
+.tab li{width: 50%;}
+.tab li:first-child{
+    border-right: 1px #ccc solid;
+}
+.tab a{
+    line-height: 36px;
+    text-align: center;
+}
+.tab a:hover{background: #ccc;}
+
+.notice a{
+    line-height: 36px;
+    display: flex;    
+}
+.num{width: 20px;}
+.subject{
+    /* wh - o - tv */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.notice a:hover{background: #ccc;}
+
+.gallery img{width: 80px;} 
+.gallery{
+    height: 144px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+.gallery a:hover{opacity: .7;}
+
+.title{
+    line-height: 36px;
+    text-align: center;
+    box-shadow: 0 0 3px #333;
+}
+
+
+.banner img{height: 80px;}
+.banner{
+    height: 144px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 13px;
+}
+.banner li:first-child a{
+    height: 80px;
+    width: 80px;
+    outline: 1px #ccc solid;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+}
+.banner li:first-child a:hover{
+    opacity: .7;
+}
+.banner a:hover{text-decoration: underline;}
+
+#footer{
+    display: flex;
+    height: 100px;
+    background: #eee;
+}
+.f_logo{
+    padding: 30px 0;
+    filter: grayscale(1);
+}
+.f_right{
+    width: 600px;
+    font-size: 13px;
+    text-align: center;
+}
+.f_menu a{display: inline-block;}
+.f_menu{
+    text-align: center;
+    line-height: 32px;
+}
+.f_menu a:hover{text-decoration: underline;}
